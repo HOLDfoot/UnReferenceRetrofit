@@ -1,0 +1,4 @@
+<resources>
+    <string name="confirm">확인</string>
+    <string name="account_kick_off">계정이 다른 장치에 로그인됨</string>
+</resources>

@@ -1,0 +1,5 @@
+<resources>
+    <string name="demo_name">NetLibDemo</string>
+    <string name="confirm">Sure</string>
+    <string name="account_kick_off">Account login on other devices</string>
+</resources>

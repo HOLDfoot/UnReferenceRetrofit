@@ -1,0 +1,4 @@
+<resources>
+    <string name="confirm">确定</string>
+    <string name="account_kick_off">账号在其他设备登录</string>
+</resources>

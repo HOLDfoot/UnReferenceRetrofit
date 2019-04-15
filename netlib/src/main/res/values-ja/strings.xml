@@ -1,0 +1,4 @@
+<resources>
+    <string name="confirm">はい</string>
+    <string name="account_kick_off">アカウントは他の端末でログインしています</string>
+</resources>
