@@ -11,6 +11,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:name=".BaseApplication"
+        android:usesCleartextTraffic="true"
         tools:replace="android:icon,android:theme,android:allowBackup,android:label">
 
         <activity android:name=".MainActivity">

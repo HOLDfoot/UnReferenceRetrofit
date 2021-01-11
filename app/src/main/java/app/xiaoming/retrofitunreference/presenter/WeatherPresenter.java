@@ -29,9 +29,4 @@ public class WeatherPresenter extends IPresenter {
                 .subscribe(subscriber);
         addObserver(subscriber);
     }
-    
-    public void getWeather(boolean progress, OnSubscriberNextListener nextListener) {
-        getDataWith(iService.getWeather(), progress, true, true, nextListener);
-    }
-    
 }

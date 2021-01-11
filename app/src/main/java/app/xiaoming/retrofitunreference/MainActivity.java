@@ -33,7 +33,7 @@ public class MainActivity extends BasePresenterActivity {
     }
     
     private void getWeather() {
-        weatherPresenter.getWeather(true, new OnSubscriberNextListener<WeekWeatherBean>() {
+        weatherPresenter.getWeather(new OnSubscriberNextListener<WeekWeatherBean>() {
             @Override
             public void onNext(WeekWeatherBean weekWeatherBean) {
                 textView.setText("今日天气:\n" + JSON.toJSONString(weekWeatherBean.getResult().get(0)));
