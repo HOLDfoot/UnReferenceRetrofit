@@ -48,14 +48,14 @@ public abstract class IPresenter<T extends BaseRespBean> implements Releasable {
      * @param reference 是否加入到引用管理
      * @param nextListener 网络请求回掉监听器
      */
-    protected void getDataWith(Observable<WeekWeatherBean> observable, boolean progress, boolean cancelable, boolean reference, OnSubscriberNextListener nextListener) {
+    protected void getDataWith(Observable<T> observable, boolean progress, boolean cancelable, boolean reference, OnSubscriberNextListener nextListener) {
         BaseSubscriber subscriber;
         if (progress) {
             subscriber = new ProgressSubscriber<WeekWeatherBean>(mContext, cancelable, nextListener);
         } else {
             subscriber = new CommonSubscriber(mContext, nextListener);
         }
-        observable.compose(SchedulersCompat.<WeekWeatherBean>applyIoSchedulers())
+        observable.compose(SchedulersCompat.<T>applyIoSchedulers())
                 .subscribe(subscriber);
         if (reference) {
             addObserver(subscriber);
